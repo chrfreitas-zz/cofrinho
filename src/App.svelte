@@ -6,9 +6,18 @@
     value: null,
     data: null
   };
+
+  const clearForm = () => {
+    goal = { name: null, value: null, data: null };
+  };
+
+  const handleOnSubmit = () => {
+    goals.add(goal);
+    clearForm();
+  };
 </script>
 
-<form on:submit|preventDefault={() => goals.add(goal)}>
+<form on:submit|preventDefault={handleOnSubmit}>
   <label for="">Name</label>
   <input type="text" bind:value={goal.name} />
 
@@ -23,6 +32,11 @@
 
 <ul>
   {#each $goals as goal}
-    <li>{goal.name} {goal.value}</li>
+    <li>
+      <div>
+        <span>Name: {goal.name}</span>
+        <span on:click={() => goals.delete(goal.name)}>X</span>
+      </div>
+    </li>
   {/each}
 </ul>

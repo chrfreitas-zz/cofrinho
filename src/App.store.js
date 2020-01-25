@@ -5,8 +5,8 @@ const init = () => {
 
   return {
     subscribe,
-    add: goal => update(goals => [...goals, goal]),
-    delete: () => {}
+    add: goal => update(goals => goals.concat(goal)),
+    delete: name => update(goals => goals.filter(goal => goal.name !== name))
   };
 };
 
