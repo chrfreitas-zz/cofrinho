@@ -6,11 +6,17 @@
   let goal = {
     name: null,
     value: null,
-    data: null
+    data: null,
+    investments: []
   };
 
   const clearForm = () => {
-    goal = { name: null, value: null, data: null };
+    goal = {
+      name: null,
+      value: null,
+      data: null,
+      investments: []
+    };
   };
 
   const handleOnSubmit = () => {
@@ -24,10 +30,10 @@
   <label for="">Name</label>
   <input type="text" bind:value={goal.name} />
 
-  <label for="">Valor</label>
+  <label for="">Value</label>
   <input type="text" bind:value={goal.value} />
 
-  <label for="">Data</label>
+  <label for="">Date</label>
   <input type="text" bind:value={goal.data} />
 
   <button>Save</button>

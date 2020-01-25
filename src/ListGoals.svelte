@@ -1,5 +1,7 @@
 <script>
   import { goals } from "./store";
+
+  goals.subscribe(console.log);
 </script>
 
 <ul>
