@@ -7,18 +7,16 @@ const init = () => {
     subscribe,
     add: goal => update(goals => goals.concat(goal)),
     delete: name => update(goals => goals.filter(goal => goal.name !== name)),
-    addInvestment: investment =>
+    addTransaction: transaction =>
       update(goals =>
-        goals.map(goal => {
-          if (goal.name == investment.goal) {
-            return {
-              ...goal,
-              investments: [...goal.investments, investment]
-            };
-          }
-
-          return goal;
-        })
+        goals.map(goal =>
+          goal.name == transaction.goal
+            ? {
+                ...goal,
+                transactions: [...goal.transactions, transaction]
+              }
+            : goal
+        )
       )
   };
 };

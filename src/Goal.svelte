@@ -1,27 +1,16 @@
 <script>
   import { navigate } from "svelte-routing";
-
   import { goals } from "./store";
 
   let goal = {
     name: null,
     value: null,
     data: null,
-    investments: []
-  };
-
-  const clearForm = () => {
-    goal = {
-      name: null,
-      value: null,
-      data: null,
-      investments: []
-    };
+    transactions: []
   };
 
   const handleOnSubmit = () => {
     goals.add(goal);
-    clearForm();
     navigate("/");
   };
 </script>
