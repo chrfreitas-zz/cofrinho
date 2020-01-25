@@ -1,4 +1,6 @@
 <script>
+  import { navigate } from "svelte-routing";
+
   import { goals } from "./store";
 
   let goal = {
@@ -14,6 +16,7 @@
   const handleOnSubmit = () => {
     goals.add(goal);
     clearForm();
+    navigate("/");
   };
 </script>
 
@@ -29,14 +32,3 @@
 
   <button>Save</button>
 </form>
-
-<ul>
-  {#each $goals as goal}
-    <li>
-      <div>
-        <span>Name: {goal.name}</span>
-        <a href="?deleted" on:click={() => goals.delete(goal.name)}>Delete</a>
-      </div>
-    </li>
-  {/each}
-</ul>
