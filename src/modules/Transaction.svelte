@@ -1,6 +1,6 @@
 <script>
   import { navigate } from "svelte-routing";
-  import { goals } from "./store";
+  import { goals } from "../store";
 
   let transaction = {
     goal: null,

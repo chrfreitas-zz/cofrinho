@@ -1,5 +1,5 @@
 <script>
-  import { goals } from "./store";
+  import { goals } from "../store";
 
   const calculateTotalTransactions = goal =>
     goal.transactions.reduce(
