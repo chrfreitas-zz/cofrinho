@@ -57,14 +57,14 @@
     stroke-dasharray: 629;
     stroke: #fff;
     opacity: 0.9;
-    animation: load 10s;
+    animation: load 1.2s;
   }
 </style>
 
 <ul class="progress-circle">
   <li data-name="CSS Skill" data-percent={currentPercentagem * 100}>
     <svg viewBox="-10 -10 220 220">
-      <g fill="none" stroke-width="6" transform="translate(100,100)">
+      <g fill="none" stroke-width="3" transform="translate(100,100)">
         <path d="M 0,-100 A 100,100 0 0,1 86.6,-50" stroke="url(#cl1)" />
         <path d="M 86.6,-50 A 100,100 0 0,1 86.6,50" stroke="url(#cl2)" />
         <path d="M 86.6,50 A 100,100 0 0,1 0,100" stroke="url(#cl3)" />
@@ -78,7 +78,7 @@
         d="M200,100 C200,44.771525 155.228475,0 100,0 C44.771525,0 0,44.771525
         0,100 C0,155.228475 44.771525,200 100,200 C155.228475,200 200,155.228475
         200,100 Z"
-        stroke-dashoffset={currentCicle} />
+        stroke-dashoffset={totalCircle} />
     </svg>
   </li>
 </ul>
@@ -92,8 +92,8 @@
       y1="0"
       x2="1"
       y2="1">
-      <stop stop-color="#618099" />
-      <stop offset="100%" stop-color="#8e6677" />
+      <stop stop-color="#f57c00" />
+      <stop offset="100%" stop-color="#d76600" />
     </linearGradient>
     <linearGradient
       id="cl2"
@@ -102,8 +102,8 @@
       y1="0"
       x2="0"
       y2="1">
-      <stop stop-color="#8e6677" />
-      <stop offset="100%" stop-color="#9b5e67" />
+      <stop stop-color="#d76600" />
+      <stop offset="100%" stop-color="#b44c00" />
     </linearGradient>
     <linearGradient
       id="cl3"
@@ -112,8 +112,8 @@
       y1="0"
       x2="0"
       y2="1">
-      <stop stop-color="#9b5e67" />
-      <stop offset="100%" stop-color="#9c787a" />
+      <stop stop-color="#b44c00" />
+      <stop offset="100%" stop-color="#913200" />
     </linearGradient>
     <linearGradient
       id="cl4"
@@ -122,8 +122,8 @@
       y1="1"
       x2="0"
       y2="0">
-      <stop stop-color="#9c787a" />
-      <stop offset="100%" stop-color="#817a94" />
+      <stop stop-color="#913200" />
+      <stop offset="100%" stop-color="#c55800" />
     </linearGradient>
     <linearGradient
       id="cl5"
@@ -132,8 +132,8 @@
       y1="1"
       x2="0"
       y2="0">
-      <stop stop-color="#817a94" />
-      <stop offset="100%" stop-color="#498a98" />
+      <stop stop-color="#c55800" />
+      <stop offset="100%" stop-color="#dc6900" />
     </linearGradient>
     <linearGradient
       id="cl6"
@@ -142,8 +142,8 @@
       y1="1"
       x2="1"
       y2="0">
-      <stop stop-color="#498a98" />
-      <stop offset="100%" stop-color="#618099" />
+      <stop stop-color="#dc6900" />
+      <stop offset="100%" stop-color="#f57c00" />
     </linearGradient>
   </defs>
 </svg>
