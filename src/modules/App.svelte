@@ -4,11 +4,14 @@
   import Goal from "./Goal.svelte";
   import Progress from "./Progress.svelte";
   import Transaction from "./Transaction.svelte";
-  import Navigation from "../components/Navigation.svelte";
   import Home from "./Home.svelte";
+  import Navigation from "../components/Navigation.svelte";
 </script>
 
 <style>
+  :global(body) {
+    padding: 0;
+  }
   .main {
     background-color: white;
     height: 100%;
